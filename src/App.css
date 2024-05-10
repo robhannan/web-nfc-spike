@@ -28,6 +28,16 @@
   color: #61dafb;
 }
 
+.Write-Button {
+  background-color: #61dafb;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  width: 200px;
+  height: 60px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
