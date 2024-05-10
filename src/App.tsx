@@ -10,7 +10,7 @@ interface NDEFReadingEvent extends Event {
 const WriteUrl = async (setMessage: Function) => {
   try {
     const ndef = new NDEFReader();
-    await ndef.write("Hello world!");
+    await ndef.write("https://selfridges.com");
     console.log("> Message written");
     setMessage("Message written");
   } catch (error) {
@@ -60,7 +60,7 @@ const App = () => {
         >
           Write tag
         </button>
-        <button
+        {/* <button
           className="Write-Button"
           onClick={() => {
             console.log("User clicked read button");
@@ -69,7 +69,7 @@ const App = () => {
           }}
         >
           Read tag
-        </button>
+        </button> */}
         <div>{message}</div>
       </header>
     </div>
