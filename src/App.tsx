@@ -9,8 +9,12 @@ interface NDEFReadingEvent extends Event {
 
 const WriteUrl = async (setMessage: Function) => {
   try {
+    const encoder = new TextEncoder();
     const ndef = new NDEFReader();
-    await ndef.write("https://selfridges.com");
+    await ndef.write({records: [
+      {recordType: "url", data: "https://selfridges.com"},
+      {recordType: "android.com:pkg", data: encoder.encode("com.selfridges.android")}
+    ]});
     console.log("> Message written");
     setMessage("Message written");
   } catch (error) {
