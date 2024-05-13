@@ -60,7 +60,7 @@ const App = () => {
         >
           Write tag
         </button>
-        {/* <button
+        <button
           className="Write-Button"
           onClick={() => {
             console.log("User clicked read button");
@@ -69,7 +69,7 @@ const App = () => {
           }}
         >
           Read tag
-        </button> */}
+        </button>
         <div>{message}</div>
       </header>
     </div>
